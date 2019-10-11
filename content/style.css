@@ -1,15 +1,3 @@
-body {
-  overflow-x: hidden;
-}
-
-#app {
-    height:100vh;
-    width: calc(100vw + 17px);
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-}
-
 #nav {
     position:absolute;
     left: -140px;
