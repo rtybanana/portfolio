@@ -3,9 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <title>Test</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="content/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+  <link rel="stylesheet" href="content/style.css">
+
+  <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
 </head>
-<body class="bg-primary">
-Hello World!
+<body>
+<div id="app" class="container-fluid p-0 m-0" style="height:100vh; width:100vw; overflow-x:hidden;">
+  <div id="nav" class="bg-primary">
+    <i id="chevron" class="fas fa-chevron-right d-none d-sm-block"></i>
+    <ul style="list-style: none;">
+      <li><b-button class="btn-block" variant="link" style="color:white;">Profile</b-button></li>
+      <li><b-button class="btn-block" variant="link" style="color:white;">University</b-button></li>
+      <li><b-button class="btn-block" variant="link" style="color:white;">Polysoft IT</b-button></li>
+      <li><b-button class="btn-block" variant="link" style="color:white;">Contact</b-button></li>
+    </ul>
+    <div style="position:absolute; bottom:35px; width:100%;">
+      <a style="position:absolute; left:40px;" href="mailto:rorypinkney@yahoo.co.uk"><i class="fas fa-envelope fa-lg"></i></a>
+      <a style="position:absolute; right:40px;" href="https://www.linkedin.com/in/rory-pinkney-294b64192/"><i class="fab fa-linkedin fa-lg"></i></a>
+    </div>
+  </div>
+  <div class="row no-gutters" style="z-index:-1;">
+    <div class="col-12 p-0">
+      <div class="container-fluid overflow-auto p-0">
+        <div class="row no-gutters">
+          <div class="col-12" style="background-color:#ffdbac; padding-top:50px; padding-bottom:100px;">
+            <img id="picture" class="mx-auto d-block" src="content/profile-picture.png" title="this is me" alt="Picture of Me" width="70%" style="border-radius:100%; max-height:350px; max-width:350px;"/>
+          </div>
+          <div class="col-12" style="height:500px;">
+            <div id="name"><h1 style="font-weight:200;">Rory Pinkney</h1></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
+
+<script>
+  let app = new Vue({
+    el: '#app',
+    data: {
+      scrollY: 0
+    },
+    methods: {
+      handleScroll(){
+        console.log('here');
+        this.scrollY = document.getElementById('app').scrollTop;
+      }
+    },
+    mounted() {
+        document.getElementById('app').addEventListener('scroll', this.handleScroll);
+    },
+    destroyed(){
+
+    }
+  })
+</script>
