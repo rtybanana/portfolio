@@ -1,3 +1,15 @@
+body {
+  overflow-x: hidden;
+}
+
+#app {
+    height:100vh;
+    width: calc(100vw + 17px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
 #nav {
     position:absolute;
     left: -140px;
@@ -40,7 +52,7 @@
     color: var(--primary);
 }
 
-@media screen and (min-width:992px) and (max-width:1200px){
+@media screen and (min-width:768px) and (max-width:1200px){
     #nav {
         top:300px;
         left: -110px;
