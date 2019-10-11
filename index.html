@@ -22,13 +22,14 @@
     <div class="menu-btn"></div>
     <div class="menu-btn"></div>
   </div>
-  <div id="nav" class="bg-primary" :style="show_menu ? {left:0} : {}">
+  <div id="nav" class="bg-primary" :style="show_menu ? {left:0} : {}" tabindex="0">
     <i id="chevron" class="fas fa-chevron-right d-none d-md-block"></i>
+    <div class="text-center d-md-none pt-1"><h3>Portfolio</h3></div>
     <ul style="list-style: none;">
-      <li><b-button class="btn-block" variant="link" style="color:white;">Profile</b-button></li>
-      <li><b-button class="btn-block" variant="link" style="color:white;">University</b-button></li>
-      <li><b-button class="btn-block" variant="link" style="color:white;">Polysoft IT</b-button></li>
-      <li><b-button class="btn-block" variant="link" style="color:white;">Contact</b-button></li>
+      <li><b-button class="btn-block" variant="link">Profile</b-button></li>
+      <li><b-button class="btn-block" variant="link">University</b-button></li>
+      <li><b-button class="btn-block" variant="link">Polysoft IT</b-button></li>
+      <li><b-button class="btn-block" variant="link">Contact</b-button></li>
     </ul>
     <div style="position:absolute; bottom:35px; width:100%;">
       <a style="position:absolute; left:40px;" href="mailto:rorypinkney@yahoo.co.uk"><i class="fas fa-envelope fa-lg"></i></a>
