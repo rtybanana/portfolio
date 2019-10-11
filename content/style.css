@@ -40,6 +40,20 @@
     color: var(--primary);
 }
 
+#menu-btn{
+    position: fixed;
+    right: 12px;
+    top: 5px;
+    z-index:1;
+}
+
+.menu-btn {
+    width: 35px;
+    height: 5px;
+    background-color: var(--primary);
+    margin: 6px 0;
+}
+
 @media screen and (min-width:576px) and (max-width:1200px){
     #nav {
         top:300px;
