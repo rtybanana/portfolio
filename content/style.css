@@ -40,7 +40,7 @@
     color: var(--primary);
 }
 
-@media screen and (min-width:576px) and (max-width:1200px){
+@media screen and (min-width:768px) and (max-width:1200px){
     #nav {
         top:300px;
         left: -110px;
