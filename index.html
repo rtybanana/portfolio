@@ -15,6 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
 </head>
+
 <body>
 <div id="app" class="container-fluid p-0 m-0">
   <div id="menu-btn" class="d-block d-md-none" @click="toggleMenu">
@@ -22,14 +23,15 @@
     <div class="menu-btn"></div>
     <div class="menu-btn"></div>
   </div>
-  <div id="nav" class="bg-primary" :style="show_menu ? {left:0} : {}" tabindex="0">
-    <i id="chevron" class="fas fa-chevron-right d-none d-md-block"></i>
-    <div class="text-center d-md-none pt-1"><h3>Portfolio</h3></div>
+  <div id="nav" class="bg-primary" :class="scrolled" :style="show_menu ? {left:0} : {}" tabindex="0">
+    <i id="chevron" class="fas fa-chevron-right d-none d-md-block" :class="scrolled"></i>
+    <div class="text-center d-md-none py-1"><h3>Portfolio</h3></div>
     <ul style="list-style: none;">
-      <li><b-button class="btn-block" variant="link">Profile</b-button></li>
-      <li><b-button class="btn-block" variant="link">University</b-button></li>
-      <li><b-button class="btn-block" variant="link">Polysoft IT</b-button></li>
-      <li><b-button class="btn-block" variant="link">Contact</b-button></li>
+      <li><b-button class="btn-block" variant="link" @click="scrollTo($refs.profile)">Profile</b-button></li>
+      <li><b-button class="btn-block" variant="link" @click="scrollTo($refs.university)">University</b-button></li>
+      <li><b-button class="btn-block" variant="link" @click="scrollTo($refs.experience)">Experience</b-button></li>
+      <li><b-button class="btn-block" variant="link" @click="scrollTo($refs.projects)">Projects</b-button></li>
+      <li><b-button class="btn-block" variant="link" @click="scrollTo($refs.contact)">Contact</b-button></li>
     </ul>
     <div style="position:absolute; bottom:35px; width:100%;">
       <a style="position:absolute; left:40px;" href="mailto:rorypinkney@yahoo.co.uk"><i class="fas fa-envelope fa-lg"></i></a>
@@ -38,15 +40,123 @@
   </div>
   <div class="row no-gutters" style="z-index:-1;">
     <div class="col-12 p-0">
-      <div class="container-fluid overflow-auto p-0">
+      <div class="container-fluid p-0">
         <div class="row no-gutters">
           <div class="col-12" style="background-color:#ffdbac; padding-top:50px; padding-bottom:100px;">
-            <img id="picture" class="mx-auto d-block" src="content/profile-picture.png" title="this is me" alt="picture of me" width="70%" />
+            <img id="picture" class="mx-auto d-block" src="content/images/profile-picture.png" title="this is me" alt="picture of me" width="70%" />
           </div>
-          <div class="col-12 text-center" style="height:500px;">
-            <div id="name" class="title">
+          <div class="col-12 text-center" style="height:100px;">
+            <div id="title">
               <h1 style="font-weight:200; padding-bottom:15px;">Rory Pinkney</h1>
-              <h1 style="font-weight:200;">Software Engineer</h1>
+              <h1 style="font-weight:200; padding-bottom:15px;">Software Engineer</h1>
+            </div>
+          </div>
+          <!-- <div> -->
+          <div class="col-10 col-xl-8 offset-1 offset-xl-2 my-4">
+            <h2 ref="profile" class="mb-2">Profile</h2>
+            I am an enthusiastic and capable software engineer with skills in a broad range of programming paradigms. I am particularly interested in low
+            level programming concepts and techinques; however, most of my professional work has involved web client development using modern reactive javascript 
+            frameworks (Vue) so I am also very experienced on the front-end. I have enjoyed a rich set of modules provided by the University of East Anglia 
+            which has allowed me to gain a good understanding of many areas of computer science. I have continued on at UEA to study for my master's degree with a 
+            thesis focusing on improving diagnosis of early-onset Alzheimer's disease by employing advanced deep learning techniques on a combination of neuro-imaging
+            modalities. Outside of university, I have built a couple of node.js web applications as side projects and 
+
+            <h4 class="mt-4 mb-2">Quick Skills</h4>
+            <ul>
+              <li>
+                <span class>Advanced</span>
+                <ul>
+                  <li>Languages:&nbsp; Javascript &bull; C++ </li>
+                  <li>Frameworks:&nbsp; Vue.js &bull; Node.js</li>
+                  <li>Other:&nbsp; MongoDB &bull; Git &bull; FLTK</li>
+                </ul>
+              </li>
+              <li>
+                Proficient
+                <ul>
+                  <li>Languages:&nbsp; C &bull; Java &bull; Python &bull; ARMv7 Assembly Language</li>
+                  <li>Frameworks:&nbsp;</li>
+                </ul>
+              </li>
+              <li>
+                Competent
+                <ul>
+                  <li>Javascript</li>
+                  <li>Frameworks:&nbsp; Django</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-10 col-xl-8 offset-1 offset-xl-2 px-5"><hr></div>
+
+          <div class="col-10 col-xl-8 offset-1 offset-xl-2 my-4">
+            <h2 ref="university" class="mb-2">University</h2>
+            For my undergraduate degree at the UEA, I completed modules with focuses on a wide array of programming concepts.
+          </div>
+
+          <div class="col-10 col-xl-8 offset-1 offset-xl-2 px-5"><hr></div>
+
+          <div class="col-10 col-xl-8 offset-1 offset-xl-2 my-4">
+            <h2 ref="experience" class="mb-2">Experience</h2>
+            I have
+          </div>
+
+          <div class="col-10 col-xl-8 offset-1 offset-xl-2 px-5"><hr></div>
+
+          <div class="col-10 col-xl-8 offset-1 offset-xl-2 my-4">
+            <h2 ref="projects" class="mb-2">Projects</h2>
+            Alongside university and professional work as a software engineer, I have also created a couple of side projects, both for my own enjoyment and to
+            solve problems which I personally felt should be solved. I have a particular interest in developing in the Spotify ecosystem because I feel that there 
+            are many social aspects of music which are yet to be properly explored by music streaming services.
+
+            <div class="row mt-5">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-12 col-lg-6">
+                    <h3 class="mb-2">FastFest</h3>
+                    FastFest is a project that a univeristy friend and I designed and built in about a week which allows users to sign in to their Spotify account and be 
+                    recommended a music festival based on a weighted analysis of their listening habits. It is a node.js web application which combines the Spotify and Skiddle
+                    APIs, applying a simple algorithm two a user's top artists and tracks to give each artist a weighted score of how likely the user is to enjoy seeing them live.
+                    The application then interrogates the Skiddle API and ranks each festival based on a score from the number of matching artists. Additionally, you are able to 
+                    create a dynamic festival poster image which can be downloaded or shared instantly to Twitter.
+                    <br><br>
+                    This the first side project that either of us had ever worked on and it taught us both a lot about the process of developing a full web application right from 
+                    inital design to deployment.
+                  </div>
+                  <div class="col-12 col-lg-6 my-auto">
+                    <img class="d-lg-none mx-auto mt-4" src="content/images/projects/fastfest.png" title="FastFest" alt="FastFest Image" width="100%"/>
+                    <img class="d-none d-lg-block mx-auto" src="content/images/projects/fastfest.png" title="FastFest" alt="FastFest Image" width="120%"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-5">
+                <div class="row">
+                  <div class="col-12 col-lg-6 order-lg-2">
+                    <h3 class="mb-2">Qunite</h3>
+                    Qunite is a solo project I took up a short while after completing FastFest
+                  </div>
+                  <div class="col-12 col-lg-6 my-auto order-lg-1">
+                    <img class="d-lg-none mx-auto float-right mt-4" src="content/images/projects/qunite.png" title="Qunite" alt="Qunite Image" width="100%"/>
+                    <img class="d-none d-lg-block mx-auto float-right" src="content/images/projects/qunite.png" title="Qunite" alt="Qunite Image" width="120%"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-10 col-xl-8 offset-1 offset-xl-2 px-5"><hr></div>
+
+          <div class="col-12 mt-4" style="background-color: var(--primary); color: white;">
+            <div class="row">
+              <div class="col-10 col-xl-8 offset-1 offset-xl-2 my-4">
+                <h2 ref="contact" class="mb-2">Contact</h2>
+                personal: rorypinkney@yahoo.co.uk
+                <br>
+                business: polysoftit@gmail.com
+                <br>
+                mobile: +44 7763 278830
+              </div>
             </div>
           </div>
         </div>
@@ -64,6 +174,11 @@
       show_menu: false,
       scrollY: 0
     },
+    computed: {
+      scrolled() {
+        return this.scrollY > 0 ? 'scrolled' : '';
+      }
+    },
     methods: {
       handleScroll(){
         this.show_menu = false;
@@ -74,11 +189,14 @@
       },
       handleResize() {
         this.show_menu = false;
-      }
+      },
+      scrollTo(anchor) {
+        anchor.scrollIntoView({behavior: "smooth"});
+      },
     },
     mounted() {
-        window.addEventListener('scroll', this.handleScroll);
-        window.addEventListener('resize', this.handleResize);
+      window.addEventListener('scroll', this.handleScroll);
+      window.addEventListener('resize', this.handleResize);
     }
   })
 </script>

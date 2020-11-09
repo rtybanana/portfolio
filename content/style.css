@@ -1,3 +1,8 @@
+body {
+    overflow-x: hidden;
+    font-size: 17px;
+}
+
 body, html, h1, h2, h3, h4, h5, h6 {
     font-weight:200 !important;
     margin-bottom: 0;
@@ -25,18 +30,6 @@ body, html, h1, h2, h3, h4, h5, h6 {
 #nav > ul > li > button {
     color: white;
     border-radius: 0;
-}
-
-.btn-link:hover {
-    text-decoration: none;
-    border-left: solid white 3px;
-    border-right: solid var(--primary) 3px;
-}
-
-.btn-link:focus {
-    text-decoration: none;
-    border-left: solid white 3px;
-    border-right: solid var(--primary) 3px;
 }
 
 #chevron {
@@ -71,6 +64,18 @@ body, html, h1, h2, h3, h4, h5, h6 {
     margin: 6px 0;
 }
 
+.btn-link:hover {
+    text-decoration: none;
+    border-left: solid white 3px;
+    border-right: solid var(--primary) 3px;
+}
+
+.btn-link:focus {
+    text-decoration: none;
+    border-left: solid white 3px;
+    border-right: solid var(--primary) 3px;
+}
+
 @media screen and (min-width:768px) and (max-width:1200px){
     #nav {
         top:30%;
@@ -93,9 +98,24 @@ body, html, h1, h2, h3, h4, h5, h6 {
     }
 
     #chevron {
-        right: -20px;
-        color: var(--primary);
+        /* right: -20px;
+        color: var(--primary); */
         opacity: 0;
+    }
+
+    #nav.scrolled {
+        top:30%;
+        left: -110px;
+        height:300px;
+    }
+    #nav.scrolled:hover, #nav.scrolled:focus {
+        left: 0;
+    }
+
+    #chevron.scrolled {
+        right:10px;
+        color: white;
+        opacity: 1;
     }
 }
 
@@ -106,14 +126,9 @@ body, html, h1, h2, h3, h4, h5, h6 {
     animation: 1s ease-in-out float-in;
 }
 
-#name {
-    top:-65px;
-}
-
-.title {
+#title {
+    top:-62px;
     position:relative;
-    /*left:50%;*/
-    /*transform: translateX(-50%);*/
     white-space:nowrap;
     color:black;
     animation: 1s ease-in-out float-in;
