@@ -1,4 +1,4 @@
-body {
+html {
     overflow-x: hidden;
     font-size: 17px;
 }
@@ -132,6 +132,11 @@ body, html, h1, h2, h3, h4, h5, h6 {
     white-space:nowrap;
     color:black;
     animation: 1s ease-in-out float-in;
+}
+
+.link {
+    cursor: pointer; 
+    color: var(--primary);
 }
 
 @keyframes opacity {
