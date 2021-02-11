@@ -53,7 +53,7 @@
           </div>
           <!-- <div> -->
           <div class="col-10 col-xl-8 offset-1 offset-xl-2 my-4">
-            <h2 ref="profile" class="mb-2">Profile</h2>
+            <h2 ref="profile" class="mb-2" style="font-weight: 300 !important;">Profile</h2>
             I am an enthusiastic and capable software engineer with skills in a broad range of programming paradigms. I am particularly interested in low
             level programming concepts and techinques; however, most of my professional work has involved web client development using modern reactive javascript 
             frameworks (Vue) so I am also very experienced on the front-end. I have enjoyed a rich set of modules provided by the University of East Anglia 
@@ -62,33 +62,93 @@
             modalities. 
             <br><br>
             Outside of university, I have built a couple of Node.js web applications as <u class="link" @click="scrollTo($refs.projects)">side projects</u> 
-            and set up a sole trader business to gain <u class="link" @click="scrollTo($refs.experience)">experience</u> providing professional software engineering services. I have played guitar for over 10 years and it remains a strong passion of mine alongside programming.
+            and set up a sole trader business to gain <u class="link" @click="scrollTo($refs.experience)">experience</u> providing professional software engineering services. 
+            I have played guitar for over 10 years and it remains a strong passion of mine alongside programming.
 
             <h4 class="mt-4 mb-2">Quick Skills</h4>
-            <ul>
-              <li>
-                <span>Advanced</span>
+            <div class="row px-0">
+              <div class="col-12 col-md-6">
                 <ul>
-                  <li>Languages:&nbsp; Javascript &bull; C++ </li>
-                  <li>Frameworks:&nbsp; Vue.js &bull; Node.js &bull; Bootstrap</li>
-                  <li>Other:&nbsp; HTML &bull; CSS &bull; MongoDB &bull; Git &bull; Machine Learning</li>
+                  <li>
+                    <span><b>Languages</b></span>
+                    <ul>
+                      <li>C, C++</li>
+                      <li>Javascript (ES6+), Typescript</li>
+                      <li>Python</li>
+                      <li>Java</li>
+                      <li>ARM Assembly</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span><b>Soft Skills</b></span>
+                    <ul>
+                      <li>Fast Learner</li>
+                      <li>Team Player</li>
+                      <li>Strong Leader</li>
+                      <li>Clear Communicator</li>
+                      <li>Flexible</li>
+                      <li>Highly Motivated</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-6">
+                <ul>
+                  <li>
+                    <span><b>Back‑end</b></span>
+                    <ul>
+                      <li>Node, Express</li>
+                      <li>MongoDB</li>
+                      <li>Socket.IO</li>
+                      <li>REST</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span><b>Front‑end</b></span>
+                    <ul>
+                      <li>HTML5, CSS3, Bootstrap</li>
+                      <li>Vue</li>
+                      <li>Flutter</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span><b>Other</b></span>
+                    <ul>
+                      <li>UNIX/Linux, Bash, Vim</li>
+                      <li>Git</li>
+                      <li>LaTeX</li>
+                    </ul>
+                  </li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- <ul>
+              <li>
+                <span><b><u>Advanced</u></b></span>
+                <ul>
+                  <li><b>Languages</b>:&nbsp; C++ &bull; Javascript &bull; Python</li>
+                  <li><b>Frameworks</b>:&nbsp; Vue.js &bull; Node.js &bull; Bootstrap</li>
+                  <li><b>Other</b>:&nbsp; Machine Learning &bull; HTML &bull; CSS</li>
                 </ul>
               </li>
               <li>
                 Proficient
                 <ul>
-                  <li>Languages:&nbsp; C &bull; Java &bull; C# &bull; Python &bull; ARMv7 Assembly Language</li>
-                  <li>Frameworks:&nbsp;</li>
+                  <li>Languages:&nbsp; C &bull; Java &bull; C# &bull; ARMv7 Assembly Language</li>
+                  <li>Frameworks:&nbsp; PyTorch</li>
+                  <li>Other:&nbsp; Git &bull; Bash &bull; MongoDB</li>
                 </ul>
               </li>
               <li>
                 Competent
                 <ul>
-                  <li></li>
+                  <li>Languages:</li>
                   <li>Frameworks:&nbsp; Django</li>
                 </ul>
               </li>
-            </ul>
+            </ul> -->
 
             I am very fast learner and I am confident that the concepts I have learnt in my time at university will enable me to pick up any language that I may
             be required to write in.
@@ -98,7 +158,7 @@
 
           <div class="col-10 col-xl-8 offset-1 offset-xl-2 my-4">
             <h2 ref="university" class="mb-2">University</h2>
-            For my undergraduate degree at the UEA, I completed modules with focuses on a wide array of programming concepts.
+            For my integrated postgraduate degree at UEA, I have completed modules with focuses on a broad array of programming concepts.
           </div>
 
           <div class="col-10 col-xl-8 offset-1 offset-xl-2 px-5"><hr></div>
@@ -107,20 +167,36 @@
             <h2 ref="experience" class="mb-2">Experience</h2>
             Alongside my studies I have also been working professionally as a software engineer, UEA research assistant and as an occasional associate tutor for 
             computer science modules at the university. This has helped me develop experience working in professional environments where communication and cooperation
-            are key to efficiency. Towards the end of my second year at university, I set up a sole trader business <u>Polysoft IT</u>
+            are key to efficiency. Towards the end of my second year at university, I set up a sole trader business <u>Polysoft IT</u>, under which I have worked providing
+            software development and PC building services.
             
-            <table class="table mt-2">
+            <table class="table mt-5">
+              <colgroup>
+                <col span="1" style="width: 30%;">
+                <col span="1" style="width: 70%;">
+             </colgroup>
+
               <tbody>
                 <tr>
-                  <td><b>PSSL</b><br>(through Polysoft IT)</td>
-                  <td>Web Developer</td>
+                  <td><h5><b>PSSL</b></h5>(through Polysoft IT)</td>
+                  <td>
+                    <h5 class="mb-2">Web Developer</h5>
+                    From the end of my second year of university study, I have worked, through Polysoft IT, for Poseidon Software Solutions Ltd. (PSSL) on front end development
+                    for their web based staff competency management solution 'Thoosa 2'. PSSL are a small team, consisting of just three people including myself. My colleagues
+                    mostly worked on the server side of the application, leaving me in charge of the user interface implementation.
+                  </td>
                 </tr>
                 <tr>
-                  <td rowspan="2">University of East Anglia</td>
-                  <td>Associate Tutor</td>
+                  <td rowspan="2"><h5><b>University of East Anglia</b></h5></td>
+                  <td>
+                    <h5 class="mb-2">Associate Tutor</h5>
+                    During my third year of university, I worked as an associate tutor for modules I had completed in my first and second years of study
+                  </td>
                 </tr>
                 <tr>
-                  <td>Research Assistant</td>
+                  <td>
+                    <h5>Research Assistant</h5>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -140,7 +216,7 @@
                   <div class="col-12 col-lg-6">
                     <h3 class="mb-2">FastFest</h3>
                     FastFest is a project that a univeristy friend and I designed and built in about a week during February 2020 which allows users to sign in to their Spotify account and be 
-                    recommended a music festival based on a weighted analysis of their listening habits. It is a node.js web application which combines the Spotify and Skiddle
+                    recommended a music festival based on a weighted analysis of their listening habits. It is a Node.js web application which combines the Spotify and Skiddle
                     APIs, applying a simple algorithm two a user's top artists and tracks to give each artist a weighted score of how likely the user is to enjoy seeing them live.
                     The application then interrogates the Skiddle API and ranks each festival based on a score from the number of matching artists. Additionally, you are able to 
                     create a dynamic festival poster image which can be downloaded or shared instantly to Twitter.
@@ -160,11 +236,12 @@
                     <h3 class="mb-2">Qunite</h3>
                     Qunite is a solo project I took up in March 2020, about a month after completing FastFest. It is a web application which allows you to create a single, shared Spotify 
                     queue and listen together with your friends on your own devices. This means you and any number of friends can listen to the same album at the same time, even if you're
-                    miles apart. I designed and built this because it was something that I personally was interested in having. A lot of my friendships are built on a shared love of music,
-                    and with many of them now scattered around the UK, I wanted some way of sharing that social aspect of music despite the distance. 
+                    miles apart. I designed and built Qunite to solve a problem which I noticed with streaming services, which is that there is no way to enjoy them socially online. 
+                    A lot of my friendships are built on a shared love of music, and with many of them now scattered around the UK, I wanted some way of sharing that social aspect of music 
+                    despite the distance. Qunite is a very special achievement for me because it is proof that, as a software engineer, I am capable of seeing and solving real world problems 
+                    that can make my own life better.
                     <br><br>
-                    Qunite is built using Node/Express, MongoDB 
-                    and Vue.js and is hosted on a DigitalOcean linux droplet <u><a style="color: var(--primary);" href="https://www.qunite.app/">here</a></u>.
+                    Qunite is built using Node/Express, MongoDB and Vue.js and is hosted on a DigitalOcean linux droplet <u><a style="color: var(--primary);" href="https://www.qunite.app/">here</a></u>.
                   </div>
                   <div class="col-12 col-lg-6 my-auto order-lg-1">
                     <img class="d-lg-none mx-auto float-right mt-4" src="content/images/projects/qunite.png" title="Qunite" alt="Qunite Image" width="100%"/>
