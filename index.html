@@ -14,6 +14,7 @@
   <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=scrollIntoView"></script>
 </head>
 
 <body>
@@ -23,6 +24,7 @@
     <div class="menu-btn"></div>
     <div class="menu-btn"></div>
   </div>
+  <div id="backdrop" :style="show_menu ? {left:0, opacity: 0.3} : {}" @click="show_menu = false;"></div>
   <div id="nav" class="bg-primary" :class="scrolled" :style="show_menu ? {left:0} : {}" tabindex="0">
     <i id="chevron" class="fas fa-chevron-right d-none d-md-block" :class="scrolled"></i>
     <div class="text-center d-md-none py-1"><h3>Portfolio</h3></div>
@@ -52,8 +54,8 @@
             </div>
           </div>
           <!-- <div> -->
-          <div class="col-10 col-xl-8 offset-1 offset-xl-2 my-4">
-            <h2 ref="profile" class="mb-2" style="font-weight: 300 !important;">Profile</h2>
+          <div class="col-10 col-xl-8 offset-1 offset-xl-2 mb-4">
+            <h2 ref="profile" class="mb-2 pt-4" style="font-weight: 300 !important;">Profile</h2>
             I am an enthusiastic and capable software engineer with skills in a broad range of programming paradigms. I am particularly interested in low
             level programming concepts and techinques; however, most of my professional work has involved web client development using modern reactive javascript 
             frameworks (Vue) so I am also very experienced on the front-end. I have enjoyed a rich set of modules provided by the University of East Anglia 
@@ -156,15 +158,15 @@
 
           <div class="col-10 col-xl-8 offset-1 offset-xl-2 px-5"><hr></div>
 
-          <div class="col-10 col-xl-8 offset-1 offset-xl-2 my-4">
-            <h2 ref="university" class="mb-2">University</h2>
+          <div class="col-10 col-xl-8 offset-1 offset-xl-2 mb-4">
+            <h2 ref="university" class="mb-2 pt-4">University</h2>
             For my integrated postgraduate degree at UEA, I have completed modules with focuses on a broad array of programming concepts.
           </div>
 
           <div class="col-10 col-xl-8 offset-1 offset-xl-2 px-5"><hr></div>
 
-          <div class="col-10 col-xl-8 offset-1 offset-xl-2 my-4">
-            <h2 ref="experience" class="mb-2">Experience</h2>
+          <div class="col-10 col-xl-8 offset-1 offset-xl-2 mb-4">
+            <h2 ref="experience" class="mb-2 pt-4">Experience</h2>
             Alongside my studies I have also been working professionally as a software engineer, UEA research assistant and as an occasional associate tutor for 
             computer science modules at the university. This has helped me develop experience working in professional environments where communication and cooperation
             are key to efficiency. Towards the end of my second year at university, I set up a sole trader business <u>Polysoft IT</u>, under which I have worked providing
@@ -204,8 +206,8 @@
 
           <div class="col-10 col-xl-8 offset-1 offset-xl-2 px-5"><hr></div>
 
-          <div class="col-10 col-xl-8 offset-1 offset-xl-2 my-4">
-            <h2 ref="projects" class="mb-2">Projects</h2>
+          <div class="col-10 col-xl-8 offset-1 offset-xl-2 mb-4">
+            <h2 ref="projects" class="mb-2 pt-4">Projects</h2>
             Alongside university and professional work as a software engineer, I have also created a couple of side projects, both for my own enjoyment and to
             solve problems which I personally felt should be solved. I have a particular interest in developing in the Spotify ecosystem because I feel that there 
             are many social aspects of music which are yet to be properly explored by music streaming services.
@@ -256,8 +258,8 @@
 
           <div class="col-12 mt-4" style="background-color: var(--primary); color: white;">
             <div class="row">
-              <div class="col-10 col-xl-8 offset-1 offset-xl-2 my-4">
-                <h2 ref="contact" class="mb-2">Contact</h2>
+              <div class="col-10 col-xl-8 offset-1 offset-xl-2 mb-4">
+                <h2 ref="contact" class="mb-2 pt-4">Contact</h2>
                 personal: rorypinkney@yahoo.co.uk
                 <br>
                 business: polysoftit@gmail.com
@@ -298,7 +300,7 @@
         this.show_menu = false;
       },
       scrollTo(anchor) {
-        show_menu = false;
+        this.show_menu = false;
         anchor.scrollIntoView({behavior: "smooth"});
       },
     },
